@@ -3,7 +3,7 @@
   "displayName": "string transform",
   "description": "变量/字符串命名规范自由转换",
   "publisher": "gauseen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.44.0"
   },
