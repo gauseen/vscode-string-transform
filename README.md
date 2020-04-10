@@ -28,6 +28,6 @@ Initial release
 
 ### 关于
 
-[My Github](https://github.com/gauseen)
+[My Github](https://github.com/gauseen/vscode-string-transform)
 
 **Enjoy!**
