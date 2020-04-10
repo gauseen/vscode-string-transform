@@ -10,13 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: npm install
-        uses: actions/npm@master
-        with:
-          args: install --unsafe-perm
-      - name: Master
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
+        run: npm install
       - name: Vscode release plugin
         uses: JCofman/vscodeaction@master
         env:
