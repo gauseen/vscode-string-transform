@@ -12,7 +12,7 @@
 
 ### 演示
 
-![演示](./images/example.gif)
+![演示](https://raw.githubusercontent.com/gauseen/images-bed/master/vscode/example.gif)
 
 ### 支持转换格式
 
@@ -32,6 +32,7 @@
 ### v2.0.0
 
 - feat: 支持更强大的转换命名规则
+
 ### v1.0.0
 
 Initial release
