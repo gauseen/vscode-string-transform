@@ -1,32 +1,54 @@
+const words = require('lodash/words')
 
-export function helloWorld_To_HelloWorld () {
-  return compose((arr: string[]) => transformWordsToString(arr, firstUpperCase, ''), splitUpperToArray)
+/**
+ * 转换成 `helloWorld` 命名方式
+ *
+ * @export
+ * @return {*} 
+ */
+export function words_to_helloWorld() {
+  return compose(firstLowerCase, (arr: string[]) => transformWordsToString(arr, firstUpperCase, ''), words)
 }
 
-export function helloWorld_To_HELLO_WORLD () {
-  return compose((arr: string[]) => transformWordsToString(arr, toUpperCase, '_'), splitUpperToArray)
+/**
+ * 转换成 `HelloWorld` 命名方式
+ *
+ * @export
+ * @return {*} 
+ */
+export function words_to_HelloWorld() {
+  return compose((arr: string[]) => transformWordsToString(arr, firstUpperCase, ''), words)
 }
 
-export function HelloWorld_To_helloWorld () {
-  return compose(firstLowerCase)
+/**
+ * 转换成 `HELLO_WORLD` 命名方式
+ *
+ * @export
+ * @return {*} 
+ */
+export function words_to_HELLO_WORLD() {
+  return compose((arr: string[]) => transformWordsToString(arr, toUpperCase, '_'), words)
 }
 
-export function HelloWorld_To_HELLO_WORLD () {
-  return compose((arr: string[]) => transformWordsToString(arr, toUpperCase, '_'), splitUpperToArray)
+/**
+ * 转换成 `hello_world` 命名方式
+ *
+ * @export
+ * @return {*} 
+ */
+export function words_to_hello_world () {
+  return compose((arr: string[]) => transformWordsToString(arr, toLowerCase, '_'), words)
 }
 
-export function HELLO_WORLD_To_helloWorld () {
-  return compose(firstLowerCase, (arr: string[]) => transformWordsToString(arr, firstUpperCase, ''), splitUnderlineToArray)
+/**
+ * 转换成 `hello-world` 命名方式
+ *
+ * @export
+ * @return {*} 
+ */
+export function words_to_hello_strike_world () {
+  return compose((arr: string[]) => transformWordsToString(arr, toLowerCase, '-'), words)
 }
-
-export function HELLO_WORLD_To_HelloWorld () {
-  return compose((arr: string[]) => transformWordsToString(arr, firstUpperCase, ''), splitUnderlineToArray)
-}
-
-
-
-
-
 
 /**
  * 首字母大写
@@ -58,6 +80,17 @@ export function firstLowerCase ([first, ...rest]: string): string {
  */
 export function toUpperCase (str: string): string {
   return str.toUpperCase()
+}
+
+/**
+ * 字母转小写
+ *
+ * @export
+ * @param {string} str
+ * @return {*}  {string}
+ */
+export function toLowerCase (str: string): string {
+  return str.toLowerCase()
 }
 
 /**

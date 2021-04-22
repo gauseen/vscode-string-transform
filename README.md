@@ -10,19 +10,18 @@
 ### 支持转换类型
 
 ```sh
-helloWorld -> HelloWorld
-helloWorld -> HELLO_WORLD
-
-HelloWorld -> helloWorld
-HelloWorld -> HELLO_WORLD
-
-HELLO_WORLD -> helloWorld
-HELLO_WORLD -> HelloWorld
+转换成 `helloWorld` 命名方式
+转换成 `HelloWorld` 命名方式
+转换成 `HELLO_WORLD` 命名方式
+转换成 `hello_world` 命名方式
 ```
 
 ### 发布版本
 
-### 1.0.0
+### v2.0.0
+
+- feat: 支持更强大的转换命名规则
+### v1.0.0
 
 Initial release
 

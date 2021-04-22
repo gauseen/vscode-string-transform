@@ -3,7 +3,7 @@
   "displayName": "string transform",
   "description": "变量/字符串命名规范自由转换",
   "publisher": "gauseen",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "engines": {
     "vscode": "^1.44.0"
   },
@@ -20,12 +20,11 @@
     "字符串转换"
   ],
   "activationEvents": [
-    "onCommand:vscode-string-transform.helloWorld_HelloWorld",
-    "onCommand:vscode-string-transform.helloWorld_HELLO_WORLD",
-    "onCommand:vscode-string-transform.HelloWorld_helloWorld",
-    "onCommand:vscode-string-transform.HelloWorld_HELLO_WORLD",
-    "onCommand:vscode-string-transform.HELLO_WORLD_helloWorld",
-    "onCommand:vscode-string-transform.HELLO_WORLD_HelloWorld"
+    "onCommand:vscode-string-transform.to_helloWorld",
+    "onCommand:vscode-string-transform.to_HelloWorld",
+    "onCommand:vscode-string-transform.to_HELLO_WORLD",
+    "onCommand:vscode-string-transform.to_hello_world",
+    "onCommand:vscode-string-transform.to_hello_strike_world"
   ],
   "main": "./out/extension.js",
   "icon": "images/icon.png",
@@ -36,28 +35,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-string-transform.helloWorld_HelloWorld",
-        "title": "helloWorld -> HelloWorld"
+        "command": "vscode-string-transform.to_helloWorld",
+        "title": "to helloWorld"
       },
       {
-        "command": "vscode-string-transform.helloWorld_HELLO_WORLD",
-        "title": "helloWorld -> HELLO_WORLD"
+        "command": "vscode-string-transform.to_HelloWorld",
+        "title": "to HelloWorld"
       },
       {
-        "command": "vscode-string-transform.HelloWorld_helloWorld",
-        "title": "HelloWorld -> helloWorld"
+        "command": "vscode-string-transform.to_HELLO_WORLD",
+        "title": "to HELLO_WORLD"
       },
       {
-        "command": "vscode-string-transform.HelloWorld_HELLO_WORLD",
-        "title": "HelloWorld -> HELLO_WORLD"
+        "command": "vscode-string-transform.to_hello_world",
+        "title": "to hello_world"
       },
       {
-        "command": "vscode-string-transform.HELLO_WORLD_helloWorld",
-        "title": "HELLO_WORLD -> helloWorld"
-      },
-      {
-        "command": "vscode-string-transform.HELLO_WORLD_HelloWorld",
-        "title": "HELLO_WORLD -> HelloWorld"
+        "command": "vscode-string-transform.to_hello_strike_world",
+        "title": "to hello-world"
       }
     ]
   },
@@ -81,5 +76,9 @@
     "mocha": "^7.1.1",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.168",
+    "lodash": "^4.17.21"
   }
 }

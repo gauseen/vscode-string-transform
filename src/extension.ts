@@ -2,12 +2,11 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode'
 import {
-  helloWorld_To_HelloWorld,
-  helloWorld_To_HELLO_WORLD,
-  HelloWorld_To_helloWorld,
-  HelloWorld_To_HELLO_WORLD,
-  HELLO_WORLD_To_helloWorld,
-  HELLO_WORLD_To_HelloWorld,
+  words_to_helloWorld,
+  words_to_HelloWorld,
+  words_to_HELLO_WORLD,
+  words_to_hello_world,
+  words_to_hello_strike_world,
 } from './utils/index'
 
 export function activate(context: vscode.ExtensionContext) {
@@ -17,20 +16,11 @@ export function activate(context: vscode.ExtensionContext) {
   }
 
   const commandMap: ICommandMap = {
-    // helloWorld -> HelloWorld
-    helloWorld_HelloWorld: helloWorld_To_HelloWorld,
-    // helloWorld -> HELLO_WORLD
-    helloWorld_HELLO_WORLD: helloWorld_To_HELLO_WORLD,
-
-    // HelloWorld -> helloWorld
-    HelloWorld_helloWorld: HelloWorld_To_helloWorld,
-    // HelloWorld -> HELLO_WORLD
-    HelloWorld_HELLO_WORLD: HelloWorld_To_HELLO_WORLD,
-
-    // HELLO_WORLD -> helloWorld
-    HELLO_WORLD_helloWorld: HELLO_WORLD_To_helloWorld,
-    // HELLO_WORLD -> HelloWorld
-    HELLO_WORLD_HelloWorld: HELLO_WORLD_To_HelloWorld,
+    to_helloWorld: words_to_helloWorld,
+    to_HelloWorld: words_to_HelloWorld,
+    to_HELLO_WORLD: words_to_HELLO_WORLD,
+    to_hello_world: words_to_hello_world,
+    to_hello_strike_world: words_to_hello_strike_world,
   }
 
   Object.keys(commandMap).forEach(commandSubName => {
