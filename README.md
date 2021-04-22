@@ -4,19 +4,30 @@
 
 ### 使用
 
-- 首先：`ctrl + shift + p`
-- 然后：输入 `helloWorld` 选择自己要转换的模式
+- 输入指令
+  - Mac `command + shift + p`
+  - Windows `ctrl + shift + p`
 
-### 支持转换类型
+- 输入 `to hello` 选择要转换的目标格式
+
+### 演示
+
+![演示](./images/example.gif)
+
+### 支持转换格式
 
 ```sh
 转换成 `helloWorld` 命名方式
 转换成 `HelloWorld` 命名方式
 转换成 `HELLO_WORLD` 命名方式
 转换成 `hello_world` 命名方式
+转换成 `hello-world` 命名方式
 ```
 
 ### 发布版本
+### v2.0.1
+
+- docs: update
 
 ### v2.0.0
 
