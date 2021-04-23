@@ -28,19 +28,19 @@ export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand(commandName, function () {
       // Get the active text editor
       let editor = vscode.window.activeTextEditor
-      if (!editor) { return }
+      if (!editor) return
   
       let document = editor.document
-      let selection = editor.selection
-  
-      let selectedText = document.getText(selection)
-
       // 获取单词的数组形式
       let composedFunc = commandMap[commandSubName]()
-      let result = composedFunc(selectedText)
 
-      editor.edit(editBuilder => {
-        editBuilder.replace(selection, result)
+      editor?.edit(editBuilder => {
+        editor?.selections.forEach((selection) => {
+          const range = selection.isEmpty ? document.getWordRangeAtPosition(selection.start) || selection : selection;
+          let selectedText = document.getText(range)
+          let result = composedFunc(selectedText)
+          editBuilder.replace(range, result)
+        })
       })
     })
 
