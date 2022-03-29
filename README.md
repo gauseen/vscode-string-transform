@@ -1,8 +1,8 @@
-## vscode-string-transform
+# vscode-string-transform
 
 > 变量/字符串命名规范自由转换
 
-### 使用
+## 使用
 
 - 输入指令
   - Mac `command + shift + p`
@@ -10,11 +10,11 @@
 
 - 输入 `to hello` 选择要转换的目标格式
 
-### 演示
+## 演示
 
 ![演示](https://raw.githubusercontent.com/gauseen/images-bed/master/vscode/example.gif)
 
-### 支持转换格式
+## 支持转换格式
 
 ```sh
 转换成 `helloWorld` 命名方式
@@ -24,13 +24,17 @@
 转换成 `hello-world` 命名方式
 ```
 
-### 发布版本
+## 发布版本 
 
-### v2.2.0
+### v2.2.1
 
 - 更新插件 Logo
 - 更新插件名称为 String To Any Case
 - 支持 Web Extension
+
+### v2.2.0
+
+- 废弃
 
 ### v2.1.0
 
@@ -48,7 +52,7 @@
 
 Initial release
 
-### 关于
+## 关于
 
 [My Github](https://github.com/gauseen/vscode-string-transform)
 

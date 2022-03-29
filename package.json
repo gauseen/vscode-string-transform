@@ -3,7 +3,7 @@
   "displayName": "String To Any Case",
   "description": "Change the selected string from one case format to another. Supported cases - ",
   "publisher": "gauseen",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "engines": {
     "vscode": "^1.44.0"
   },
