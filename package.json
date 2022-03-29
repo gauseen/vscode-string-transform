@@ -1,9 +1,9 @@
 {
   "name": "vscode-string-transform",
-  "displayName": "string transform",
-  "description": "变量/字符串命名规范自由转换",
+  "displayName": "String To Any Case",
+  "description": "Change the selected string from one case format to another. Supported cases - ",
   "publisher": "gauseen",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "engines": {
     "vscode": "^1.44.0"
   },
@@ -12,6 +12,7 @@
     "Other"
   ],
   "keywords": [
+    "String To Any Case",
     "string",
     "variable",
     "transform",
@@ -27,6 +28,7 @@
     "onCommand:vscode-string-transform.to_hello_strike_world"
   ],
   "main": "./out/extension.js",
+  "browser": "./dist/web/extension-web.js",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
@@ -57,25 +59,34 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm run package-web",
     "compile": "tsc -p ./",
+    "compile-web": "webpack",
+    "watch-web": "webpack --watch",
+    "package-web": "webpack --mode production --devtool hidden-source-map",
+    "open-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=.",
     "lint": "eslint src --ext ts",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.44.0",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "eslint": "^6.8.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@types/vscode": "^1.44.0",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@vscode/test-web": "*",
+    "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.1",
+    "process": "^0.11.10",
+    "ts-loader": "^9.2.8",
     "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
+    "vscode-test": "^1.3.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "@types/lodash": "^4.14.168",
