@@ -26,6 +26,12 @@
 
 ### 发布版本
 
+### v2.2.0
+
+- 更新插件 Logo
+- 更新插件名称为 String To Any Case
+- 支持 Web Extension
+
 ### v2.1.0
 
 - 支持多光标修改
